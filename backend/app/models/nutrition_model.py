@@ -4,6 +4,10 @@ Pydantic models for nutrition requests and responses
 from pydantic import BaseModel, Field, validator
 from typing import Dict, Any, Optional
 from enum import Enum
+from datetime import datetime
+from decimal import Decimal
+import re
+import json
 class NutritionResponse(BaseModel):
     """Response model for nutrition information"""
     success: bool = Field(..., description="Whether request was successful")
